@@ -4,15 +4,17 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
+const serverless = require("serverless-http");
 
 const app = express();
+const router = express.router();
 
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-app.get("/", function(req,res){
+router.get("/", function(req,res){
 
     res.sendFile(__dirname + "/signup.html");
 
@@ -20,7 +22,7 @@ app.get("/", function(req,res){
 })
 
 
-app.post("/", function(req,res){
+router.post("/", function(req,res){
 
     const firstName = req.body.fName;
     const lastName = req.body.lName;
@@ -84,18 +86,27 @@ app.post("/", function(req,res){
 })
 
 
-app.post("/failure", function(req,res){
+router.post("/failure", function(req,res){
 
 
     res.redirect("/")
 });
 
+router.get("/success", (req, res) => {
+    res.send("App is running..");
+});
 
-app.listen(process.env.PORT || 3000,function(){
 
-    console.log("The server is starting at  port 3000!");
+app.use("/.netlify/functions/app", router);
 
-})
+module.exports.handler = serverless(app);
+
+
+// app.listen(process.env.PORT || 3000,function(){
+
+//     console.log("The server is starting at  port 3000!");
+
+// })
 
 
 

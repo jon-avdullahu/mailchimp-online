@@ -1,15 +1,33 @@
-**MailChimp API (Example of a functional newsletter)**
+# MailChimp API (Example of a Functional Newsletter)
 
-With the use of API and NodeJS, I have made this program that saves E-mail information on the platform "MailChimp", this is possible because MailChimp allows users to generate API keys, and therefore use those API keys to create programs, like this one.
+This Application was built using: HTML, CSS and JS, with the frameworks being NodeJS and Bootstrap 5.0.
+
+The Purpose of this application is to show functionality in using the MailChimp API for the retrieval of emails, which is a necessity for Companies that want to sign up their users on updates surrounding their platform.
+
+When an E-Mail is written in and submitted, you will be able to see that email in your Admin Dashboard in your MailChimp Account
 
 
-**INSTRUCTIONS**
+## Installation
 
-**1. cd to the directory of the project and run npm install in your terminal (This will install packages in order for the project to work as intended)**
+Use "npm install" to install the packages needed in order to run this code successfully.
 
-**2. before starting the server, edit the API Key in the code so you're able to test out that the newsletter retrieval works**
 
-**3. run "nodemon" in terminal in order to start the application**
+```bash
+npm install
+npm install -g nodemon
+```
 
-**4. Success!**
+## Usage
 
+```bash
+To use this application, simply CD to the directory of the project and run "nodemon" in your terminal.
+A localhost will be ran with the port 3000, and you open it through the browser.
+
+My API Key is still provided, although it does not work because MailChimp tracks API keys in the internet and disables them, as it sees them as "Compromised"
+```
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

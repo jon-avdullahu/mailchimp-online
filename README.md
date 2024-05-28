@@ -23,7 +23,8 @@ npm install -g nodemon
 To use this application, simply CD to the directory of the project and run "nodemon" in your terminal.
 A localhost will be ran with the port 3000, and you open it through the browser.
 
-My API Key is still provided, although it does not work because MailChimp tracks API keys in the internet and disables them, as it sees them as "Compromised"
+API Key is Provided, but you need to create an account in MailChimp and Create your own API Key.
+After creating your API key, replace it in the code, this is because MailChimp shuts down API Keys that are found in the internet.
 ```
 
 

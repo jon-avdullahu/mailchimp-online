@@ -20,9 +20,11 @@ npm install -g nodemon
 ## Usage
 
 ```bash
-To use this application, simply CD to the directory of the project and run "nodemon" in your terminal.
+To use this application, simply:
 
-A localhost will be ran with the port 3000, and you open it through the browser.
+1.CD to the directory of the project and run "nodemon" in your terminal.
+
+2.A localhost will be ran with the port 3000, and you open it through the browser.
 
 API Key is Provided, but you need to create an account in MailChimp and Create your own API Key.
 
